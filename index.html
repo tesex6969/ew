@@ -32,70 +32,33 @@ body::-webkit-scrollbar {
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div id="content"> <!-- add this wrapper -->
-    <div class="background"></div>
+        <div class="background"></div>
     <div class="top_grid">
-      <img class="logo" src="img/wEDerI2.png" alt="logo">
-      <p class="logo_text">mObywatel</p>
+        <img class="logo" src="img/wEDerI2.png" alt="logo">
+        <p class="logo_text">mObywatel</p>
     </div>
     <div class="top_text">
-      <p class="welcome">Dobry wieczór!</p>
-      <p class="login_text">Zaloguj się do aplikacji.</p>
+        <p class="welcome">Dobry wieczór!</p>
+        <p class="login_text">Zaloguj się do aplikacji.</p>
     </div>
     <div class="password_box">
-      <div class="password_grid">
-        <p class="password_text">Hasło</p>
+        <div class="password_grid">
+            <p class="password_text">Hasło</p>
         <div class="input_holder">
-          <input class="password_input" type="password">
-          <div class="eye"></div>
+            <input class="password_input">
+        <div class="eye"></div>
         </div>
         <p class="forgot-password">Nie pamiętasz hasła?</p>
-      </div>
+        </div>
     </div>
-    <div class="bottom" onclick="loadPage('dashboard.html')">
-      <p class="login">Zaloguj się</p>
-      <div class="data">
+    <div class="bottom" onclick="window.location.href='dashboard.html'">
+        <p class="login">Zaloguj się</p>
+    <div class="data">
         <img class="logo_other" style="height: 20px;" src="img/CGA3FjJ.png" alt="">
         <img class="logo_other" src="img/mc.svg" alt="">
-        <p class="version">wersja 4.63.0 (17)</p>
-      </div>
+        <p class="version"></p>
     </div>
-  </div>
-
-  <script>
-    async function loadPage(url, addToHistory = true) {
-      try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('Nie udało się załadować strony');
-        const html = await res.text();
-        document.getElementById('content').innerHTML = html;
-
-        if (addToHistory) {
-          history.pushState({ url }, '', url);
-        }
-      } catch (e) {
-        document.getElementById('content').innerHTML = '<p>Błąd ładowania strony.</p>';
-      }
-    }
-
-    document.body.addEventListener('click', e => {
-      const link = e.target.closest('a[data-link]');
-      if (link) {
-        e.preventDefault();
-        loadPage(link.getAttribute('href'));
-      }
-    });
-
-    window.addEventListener('popstate', e => {
-      if (e.state && e.state.url) {
-        loadPage(e.state.url, false);
-      } else {
-        loadPage('/dashboard.html', false);
-      }
-    });
-
-    const initialPage = location.pathname === '/' ? '/dashboard.html' : location.pathname;
-    loadPage(initialPage, false);
-  </script>
-  <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
+</html>
