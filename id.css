@@ -14,6 +14,16 @@
     --text: #024b97;
     --shadow: 0px 0px 10px rgb(224, 224, 224);
 }
+    html, body {
+    overflow-y: auto;       /* pozwala scrollować w pionie */
+    overflow-x: hidden;     /* blokuje scroll poziomy */
+    scrollbar-width: none;  /* ukrywa scrollbar w Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;          /* ukrywa scrollbar w Chrome, Safari */
+}
 
 body{
     background-color: #f5f6fb;

@@ -1,6 +1,17 @@
 body{
     background-image: url(img/r6r1lhh.png) ;
 }
+    html, body {
+    overflow-y: auto;       /* pozwala scrollować w pionie */
+    overflow-x: hidden;     /* blokuje scroll poziomy */
+    scrollbar-width: none;  /* ukrywa scrollbar w Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;          /* ukrywa scrollbar w Chrome, Safari */
+}
+
 .login_title{
     font-weight: 700;
     font-size: 23px;
