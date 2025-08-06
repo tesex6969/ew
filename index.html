@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Moja Apka">
+    <link rel="apple-touch-icon" href="img/wEDerI2.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+    html, body {
+    overflow-y: auto;       /* pozwala scrollować w pionie */
+    overflow-x: hidden;     /* blokuje scroll poziomy */
+    scrollbar-width: none;  /* ukrywa scrollbar w Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;          /* ukrywa scrollbar w Chrome, Safari */
+}
+
+</style>
+    <link rel="icon" type="img/png" href="img/wEDerI2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+        <div class="background"></div>
+    <div class="top_grid">
+        <img class="logo" src="img/wEDerI2.png" alt="logo">
+        <p class="logo_text">mObywatel</p>
+    </div>
+    <div class="top_text">
+        <p class="welcome">Dobry wieczór!</p>
+        <p class="login_text">Zaloguj się do aplikacji.</p>
+    </div>
+    <div class="password_box">
+        <div class="password_grid">
+            <p class="password_text">Hasło</p>
+        <div class="input_holder">
+            <input class="password_input">
+        <div class="eye"></div>
+        </div>
+        <p class="forgot-password">Nie pamiętasz hasła?</p>
+        </div>
+    </div>
+    <div class="bottom" onclick="window.location.href='dashboard.html'">
+        <p class="login">Zaloguj się</p>
+    <div class="data">
+        <img class="logo_other" style="height: 20px;" src="img/CGA3FjJ.png" alt="">
+        <img class="logo_other" src="img/mc.svg" alt="">
+        <p class="version"></p>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
